@@ -1,3 +1,7 @@
+# This controller is a solution to the problem of incorrectly displayed alerts and notifications
+# Created by Nejdet Kadir Bektaş
+# https://medium.com/@nejdetkadir/how-to-use-devise-gem-with-ruby-on-rails-7-33b89f9a9c13
+
 class Users::DeviseController < ApplicationController
   class Responder < ActionController::Responder
     def to_turbo_stream
