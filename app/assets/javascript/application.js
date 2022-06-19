@@ -8,5 +8,3 @@ import "fullcalendar";
 //= require fullcalendar/locale-all
 
 $('#calendar').fullCalendar({});
-
-
