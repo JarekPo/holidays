@@ -1,7 +1,12 @@
 <h1>Calendar</h1>
 
-
+<div>
+  <button id="save" type="submit">
+    Save changes
+  </button>
+</div><br />
 <div id="calendar"></div>
+
 <script>
 
   document.addEventListener('DOMContentLoaded', function() {
@@ -16,6 +21,7 @@
       navLinks: true, // can click day/week names to navigate views
       selectable: true,
       selectMirror: true,
+      events: '/events.json',
       select: function(arg) {
         var title = prompt('Employee name:');
         if (title) {
@@ -35,7 +41,18 @@
       },
       editable: true,
       dayMaxEvents: true, // allow "more" link when too many events
-      events: []
+      events: [
+        {
+          "title": "Event 1",
+          "start": "2022-06-05T09:00:00",
+          "end": "2022-06-09T18:00:00"
+        },
+        {
+          "title": "Event 2",
+          "start": "2022-06-08",
+          "end": "2022-06-10"
+        }
+    ]
     });
 
     calendar.render();
