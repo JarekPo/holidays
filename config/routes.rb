@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :requests
+  resources :events
   devise_for :users
   get 'home/about'
   get 'home/calendar'
