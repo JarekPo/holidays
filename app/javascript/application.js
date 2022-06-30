@@ -3,9 +3,11 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "fullcalendar";
 
+//= require jquery
 //= require moment 
 //= require fullcalendar
-//= require fullcalendar/locale-all
+//= require_tree .
+//= require rails-ujs
 
 $('#calendar').fullCalendar({
 	events: '/events.json'

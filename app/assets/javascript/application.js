@@ -7,6 +7,7 @@ import "fullcalendar";
 //= require moment 
 //= require fullcalendar
 //= require_tree .
+//= require rails-ujs
 
 $('#calendar').fullCalendar({
 	events: '/events.json'
