@@ -30,6 +30,7 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'jquery-rails'
+gem 'rails-ujs', '~> 5.1.0.beta1'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
