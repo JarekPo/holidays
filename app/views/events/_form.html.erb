@@ -32,6 +32,10 @@
   </div>
 
   <div>
+    <%= form.text_field :user_id, id: :events_user_id, value: current_user.id, type: :hidden  %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
