@@ -3,7 +3,7 @@ end
 
 def authorize
   unless current_user.admin == true
-    flash[:alert] = "unauthorized access"
+    flash[:alert] = "Unauthorized access"
     redirect_to root_path
     false
   end
