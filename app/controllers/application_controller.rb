@@ -4,7 +4,7 @@ end
 def authorize
   unless current_user.admin == true
     flash[:alert] = "Unauthorized access"
-    redirect_to root_path
+    redirect_to home_calendar_path
     false
   end
 end
