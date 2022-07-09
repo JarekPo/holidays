@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Requests</h1>
+<h1>Approved Holidays</h1>
+
+<%= link_to "Add Holiday To Calendar", new_request_path %>
 
 <div id="requests">
   <% @requests.each do |request| %>
     <%= render request %>
     <p>
-      <%= link_to "Show this request", request %>
+      <%= link_to "Show This Holiday", request %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New request", new_request_path %>
+

@@ -1,13 +1,14 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Events</h1>
+<h1>Holiday Requests</h1>
+
+<%= link_to "New Holiday Request", new_event_path %>
 
 <div id="events">
   <% @events.each do |event| %>
     <% if event.user == current_user %>
       <%= render event %>
       <p>
-        <%= link_to "Show this event", event %>
+        <%= link_to "Show This Holiday Request", event %>
       </p>
     <% end %>
   <% end %>
@@ -16,11 +17,11 @@
     <% if current_user.admin == true %>
       <%= render event %>
       <p>
-        <%= link_to "Show this event", event %>
+        <%= link_to "Show This Holiday Request", event %>
       </p>
     <% end %>
   <% end %>
 </div>
 
-<%= link_to "New event", new_event_path %>
+
 

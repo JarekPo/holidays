@@ -31,6 +31,7 @@ gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'jquery-rails'
 gem 'rails-ujs', '~> 5.1.0.beta1'
+gem 'date_validator', '~> 0.12.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

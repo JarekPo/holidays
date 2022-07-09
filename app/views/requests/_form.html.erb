@@ -12,12 +12,12 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
+    <%= form.label "Employee Name", style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label "Notes", style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
@@ -32,6 +32,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Submit" %>
   </div>
 <% end %>
