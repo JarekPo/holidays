@@ -10,13 +10,17 @@
   </p>
 
   <p>
-    <strong>Start date:</strong>
+    <strong>Start date (The first day the employee will not be present):</strong>
     <%= request.start_date %>
   </p>
 
   <p>
-    <strong>End date:</strong>
+    <strong>End date (The last day the employee will not be present):</strong>
     <%= request.end_date %>
   </p>
 
+  <p>
+    <strong>Holiday added on: </strong>
+    <%= request.created_at %>
+  </p>
 </div>
