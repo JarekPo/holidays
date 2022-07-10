@@ -1,2 +1,36 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="wrapper-home text-center">
+    <main class="px-3 home-main"><br/>
+        
+        <p class="lead">Welcome to Holidays Management System</p>
+    </main>
+
+	<% if user_signed_in? %>
+		<% if current_user.admin == true %>
+			<h2>Welcom back Admin</h2>
+			<div class="btn btn-lg btn-secondary fw-bold  btn-home-first">
+	            <%= link_to "View Holidays Calendar", home_calendar_path %>
+	        </div>
+	        <div class="btn btn-lg btn-secondary fw-bold  btn-home-second">
+	            <%= link_to "Manage Calendar Entries", requests_path %>
+	        </div>
+		<% else %>
+			<p>
+				<%= current_user.email %>
+			</p>
+	        <div class="btn btn-lg btn-secondary fw-bold  btn-home-first">
+	            <%= link_to "Create Holiday Request", new_event_path %>
+	        </div>
+	        <div class="btn btn-lg btn-secondary fw-bold  btn-home-second">
+	            <%= link_to "My Holidays", events_path %>
+	        </div>
+	    <% end %>
+    <% else %>
+        <div class="btn btn-lg btn-secondary fw-bold btn-home-first">
+            <%= link_to 'Login', new_user_session_path, class:"nav-link" %>
+        </div>
+        <div class="btn btn-lg btn-secondary fw-bold  btn-home-second">
+            <%= link_to 'Register', new_user_registration_path, class:"nav-link" %>
+        </div>
+    <% end %>
+</div>
+   
