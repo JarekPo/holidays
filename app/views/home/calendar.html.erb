@@ -1,6 +1,8 @@
 <div class="container">
-  <h1>Calendar</h1>
-
+  <h3>Calendar</h3>
+  <% if !user_signed_in? %>
+    <p>You must be <%= link_to "logged in", new_user_session_path %> to see the entries in the Calendar.</p>
+  <% end %>
 
   <div id="calendar"></div>
 
