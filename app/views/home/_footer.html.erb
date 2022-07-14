@@ -15,9 +15,13 @@
             <h6 class="text-uppercase mb-4 font-weight-bold">
               Project Information
             </h6>
+            <%= link_to root_path do %>
+              <%= image_tag("logo.png", :alt => "logo", :class => "logo-footer mb-3") %>
+            <% end %>
             <p>
               The Holidays Management System is a project developed by <a href="https://www.ncirl.ie" target="_blank" rel="noreferrer">NCI</a> student Jaroslaw Polowy. Navigate to the <%= link_to 'About', home_about_path %> page to learn more.
             </p>
+            
           </div>
 
           <hr class="w-100 clearfix d-md-none" />
