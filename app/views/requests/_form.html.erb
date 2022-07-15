@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
     <%= form.label "Employee Name", style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
-  <div>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
     <%= form.label "Notes", style: "display: block" %>
     <%= form.text_area :description %>
   </div>
 
-  <div>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
     <%= form.label :start_date, style: "display: block" %>
     <%= form.datetime_field :start_date %>
   </div>
 
-  <div>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
     <%= form.label :end_date, style: "display: block" %>
     <%= form.datetime_field :end_date %>
   </div>
 
-  <div>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
     <%= form.submit "Submit" %>
   </div>
 <% end %>

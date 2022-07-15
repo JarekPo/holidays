@@ -1,7 +1,52 @@
+$primary-color: #9ec4b9;//#7fc2b9; //#3DC4B7; // #67C1CA;
+$secondary-color: #495057; //#264348;
+$additional-color: #ffdad2; // #FFFFE3;
+$link-color: red;
+$link-hover-color: yellow;
+
 .wrapper-home{
     background-image: url("home-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 80vh;
+}
+.logo-header{
+    margin-right: 30px;
+}
+
+.home-lead{
+    font-size: 1.75;
+    font-weight: 800;
+    color: $secondary-color;
+    text-shadow: 1px 1px 4px $additional-color;
+    margin: 20px;
+}
+.btn-lg-primary{
+    background-color: $primary-color;
+    border: 2px solid $additional-color;
+    margin: 50px;
+    padding: 15px;
+    min-width: 15%;
+    a{
+        color: $secondary-color;
+        text-decoration: none;
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+    &:hover{
+        background-color: $additional-color;
+    }
+}
+
+.page-navbar{
+    font-weight: bold;
+    a:hover{
+        color: $primary-color;
+    }
+}
+.navbar-text{
+    color: $primary-color;
+    text-align: center;
 }

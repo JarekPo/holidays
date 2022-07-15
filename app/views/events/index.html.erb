@@ -1,13 +1,14 @@
 
-<h1>Holiday Requests</h1>
+<h1 class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">Holiday Requests</h1>
 
-<%= link_to "New Holiday Request", new_event_path %>
+<%= link_to "New Holiday Request", new_event_path, class:"col-md-3 col-lg-2 col-xl-4 mx-auto mb-4" %>
 
 <div id="events">
   <% @events.each do |event| %>
     <% if event.user == current_user %>
+      <hr class="container" />
       <%= render event %>
-      <p>
+      <p class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
         <%= link_to "Show This Holiday Request", event %>
       </p>
     <% end %>
@@ -15,8 +16,9 @@
 
   <% @events.each do |event| %>
     <% if current_user.admin == true %>
+      <hr class="container" />
       <%= render event %>
-      <p>
+      <p class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
         <%= link_to "Show This Holiday Request", event %>
       </p>
     <% end %>
