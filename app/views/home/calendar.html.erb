@@ -1,9 +1,22 @@
-<div class="container">
-  <h3>Calendar</h3>
-  <% if !user_signed_in? %>
-    <p>You must be <%= link_to "logged in", new_user_session_path %> to see the entries in the Calendar.</p>
-  <% end %>
-
+<div class="container wrapper-calendar mb-4">
+  <div class="d-flex justify-content-between mb-4">
+    <% if !user_signed_in? %>
+      <h3>Holidays Calendar</h3>
+      <p>You must be <%= link_to "logged in", new_user_session_path %> to see the entries in the Calendar.</p>
+    <% else %>
+      <% if current_user.admin == true %>
+          <h3>Holidays Calendar</h3>
+          <div>
+            <%= link_to 'Add Holiday', requests_path, class:"btn btn-calendar"%>
+          </div>
+      <% else %>
+          <h3>Holidays Calendar</h3>
+          <div>
+            <%= link_to 'Create Holiday Request', new_request_path, class:"btn btn-calendar"%>
+          </div>
+      <% end %>
+    <% end %>
+  </div>
   <div id="calendar"></div>
 
   <script>

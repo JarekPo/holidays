@@ -9,6 +9,9 @@ $additional-color: #ffdad2;
     background-repeat: no-repeat;
     height: 80vh;
 }
+.wrapper-about, .wrapper-requests, .wrapper-holidays{
+    margin-bottom: 40px;;
+}
 .logo-header{
     margin-right: 30px;
 }
@@ -48,7 +51,6 @@ $additional-color: #ffdad2;
         font-weight: bold;
     }
 }
-
 .page-navbar{
     font-weight: bold;
     a:hover{
@@ -64,7 +66,7 @@ $additional-color: #ffdad2;
         color: $primary-color;
         text-decoration: none;
         &:hover{
-            color: $additional-color;
+            color: #fff;
         }
      }
 }
@@ -81,7 +83,10 @@ $additional-color: #ffdad2;
         }
     }
 }
-    
+.calendar-link{
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+}
 .btn-s-media{
     border: 1px solid $secondary-color;
     color: #FFF;
@@ -92,5 +97,14 @@ $additional-color: #ffdad2;
 .btn-s-media-google{
     &:hover{
         border: 1px solid #34a853;
+    }
+}
+.btn-calendar{
+    background-color: #A52A2A;
+    color: $additional-color;
+    font-weight: bold;
+    &:hover{
+        background-color: transparent;
+        color: #A52A2A;
     }
 }

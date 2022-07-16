@@ -1,32 +1,50 @@
 <div class="wrapper-about container">
-	<h3>About Holidays Management System</h3>
-	<p>The Holidays Management System has been developed to help employees apply for and managers manage their holidays. You can apply for holidays without making an appointment with your manager; simply fill in the <%= link_to "Holiday Request Form", new_event_path %> to be processed. Once approved by the manager, the annual leave with the employee's name will appear in the appropriate place on the <%= link_to "Calendar", home_calendar_path %>.
-	</p>
-	<h3>How does it work?</h3>
-	<h5>1. Log in.</h5>
-	<h5>2. Check the Holidays Calendar for available dates.</h5>
-	<h5>3. Fill in the Holiday Requests form.</h5>
-	<h5>4. Wait for approval.</h5>
-	<h5>5. Your holiday will appear on the calendar once granted.</h5>
-
-	<% if user_signed_in? && current_user.admin == true %>
-		<h3>How to put holidays on the calendar?</h3>
-		<h5>1. Check the Holiday Requests page for new entries.</h5>
-		<h5>2. Check the Holidays Calendar, it will help you decide whether to grant a holiday.</h5>
-		<h5>3. If granted, place the holiday on the Holidays Calendar by completing the New Holiday form.</h5>
-		<h5>4. The new holiday will appear on the Holidays Calendar.</h5>
+	<div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
+		<h3>Rules for applying for annual leave.</h3>
+		<ul>
+			<li>You are entitled to 20 days of holiday per year.</li>
+			<li>Holiday may not be granted when:</li>
+				<ul>
+					<li>The request for holiday is sent too late. Please give the manager at least 2 days to review the request.</li>
+					<li>You do not have enough holidays left to cover the requested period.</li>
+				</ul>
+			<li>During the peak season, a limited number of employees can take holidays. Each case will be considered individually.</li>
+			<li>In the event of emergencies or other special circumstances, please provide the relevant information in the Notes field.</li>
+			<li>If you are unable or unwilling to complete a holiday request form, please make an appointment with your manager.</li>
+		</ul>
+	</div>
+	<div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
+		<h3>How does it work?</h3>
+		<ol>
+			<li>Log in.</li>
+			<li>Check the Holidays Calendar for available dates.</li>
+			<li>Fill in the Holiday Requests form.</li>
+			<li>Wait for approval.</li>
+			<li>Your holiday will appear on the calendar once granted.</li>
+		</ol>
+		<hr />
+	</div>
+	<div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
+		<% if user_signed_in? && current_user.admin == true %>
+			<h3>How to put holidays on the calendar?</h3>
+			<ol>
+				<li>Check the Holiday Requests page for new entries.</li>
+				<li>Check the Holidays Calendar, it will help you decide whether to grant a holiday.</li>
+				<li>If granted, place the holiday on the Holidays Calendar by completing the New Holiday form.</li>
+				<li>The new holiday will appear on the Holidays Calendar.</li>
+			</ol>
+			<hr />
+		<% end %>
+	</div>
+	<div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
+		<h3>About Holidays Management System</h3>
+		<p>The Holidays Management System has been developed to help employees apply for and managers manage their holidays. You can apply for holidays without making an appointment with your manager; simply fill in the <%= link_to "Holiday Request Form", new_event_path %> to be processed. Once approved by the manager, the annual leave with the employee's name will appear in the appropriate place on the <%= link_to "Calendar", home_calendar_path %>.
+		</p>
+		<hr />
+	</div>
+	<% if user_signed_in? && current_user.admin == false %>
+		<div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4 links-secondary">
+			<%= link_to "Create Holiday Request", new_event_path %>
+		</div>
 	<% end %>
-
-	<h3>Rules for applying for annual leave.</h3>
-	<ul>
-		<li>You are entitled to 20 days of holiday per year.</li>
-		<li>Holiday may not be granted when:</li>
-			<ul>
-				<li>The request for holiday is sent too late. Please give the manager at least 2 days to review the request.</li>
-				<li>You do not have enough holidays left to cover the requested period.</li>
-			</ul>
-		<li>During the peak season, a limited number of employees can take holidays. Each case will be considered individually.</li>
-		<li>In the event of emergencies or other special circumstances, please provide the relevant information in the Notes field.</li>
-		<li>If you are unable or unwilling to complete a holiday request form, please make an appointment with your manager.</li>
-	</ul>
 </div>
