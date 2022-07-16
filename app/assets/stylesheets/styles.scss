@@ -1,7 +1,110 @@
+$primary-color: #bcb88a;//#bdb76b; //#9ec4b9;
+$secondary-color: #495057;
+$additional-color: #ffdad2;
+
 .wrapper-home{
     background-image: url("home-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 80vh;
+}
+.wrapper-about, .wrapper-requests, .wrapper-holidays{
+    margin-bottom: 40px;;
+}
+.logo-header{
+    margin-right: 30px;
+}
+
+.home-lead{
+    font-size: 1.75;
+    font-weight: 800;
+    color: $primary-color;
+    text-shadow: 1px 5px 8px $secondary-color;
+    margin: 20px;
+}
+.btn-lg-primary{
+    background-color: $primary-color;
+    border: 2px solid $additional-color;
+    margin: 50px;
+    padding: 15px;
+    min-width: 15%;
+    a{
+        color: $secondary-color;
+        text-decoration: none;
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+    &:hover{
+        background-color: $additional-color;
+    }
+}
+.btn-sm-primary{
+    background-color: $secondary-color;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    font-weight: bold;
+    &:hover{
+        background-color: $primary-color;
+        color: $secondary-color;
+        font-weight: bold;
+    }
+}
+.page-navbar{
+    font-weight: bold;
+    a:hover{
+        color: $primary-color;
+    }
+}
+.navbar-text{
+    color: $primary-color;
+    text-align: center;
+}
+.links-primary{
+     a{
+        color: $primary-color;
+        text-decoration: none;
+        &:hover{
+            color: #fff;
+        }
+     }
+}
+.links-secondary{
+    a{
+        color: $secondary-color;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
+        padding: 8px;
+        &:hover{
+            background-color: $primary-color;
+        }
+    }
+}
+.calendar-link{
+    border: 1px solid $secondary-color;
+    border-radius: 5px;
+}
+.btn-s-media{
+    border: 1px solid $secondary-color;
+    color: #FFF;
+    &:hover{
+        border: 1px solid $primary-color;
+    }
+}
+.btn-s-media-google{
+    &:hover{
+        border: 1px solid #34a853;
+    }
+}
+.btn-calendar{
+    background-color: #A52A2A;
+    color: $additional-color;
+    font-weight: bold;
+    &:hover{
+        background-color: transparent;
+        color: #A52A2A;
+    }
 }

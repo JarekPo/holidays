@@ -11,31 +11,31 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= form.label :name, style: "display: block", class:"form-label" %>
+    <%= form.text_field :name, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :notes, style: "display: block" %>
-    <%= form.text_area :notes %>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= form.label :notes, style: "display: block", class:"form-label" %>
+    <%= form.text_area :notes, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :start_date, style: "display: block" %>
-    <%= form.datetime_field :start_date %>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= form.label :start_date, style: "display: block", class:"form-label" %>
+    <%= form.datetime_field :start_date, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :end_date, style: "display: block" %>
-    <%= form.datetime_field :end_date %>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= form.label :end_date, style: "display: block", class:"form-label" %>
+    <%= form.datetime_field :end_date, class:"form-control" %>
   </div>
 
-  <div>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
     <%= form.text_field :user_id, id: :events_user_id, value: current_user.id, type: :hidden  %>
   </div>
 
-  <div>
-    <%= form.submit "Submit" %>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= form.submit "Submit", class:"btn btn-sm-primary" %>
   </div>
 <% end %>

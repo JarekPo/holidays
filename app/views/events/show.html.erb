@@ -1,9 +1,8 @@
 
 <%= render @event %>
 
-<div>
-  <%= link_to "Edit This Holiday Request", edit_event_path(@event) %> |
+<div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4 links-secondary">
+  <%= link_to "Edit This Holiday Request", edit_event_path(@event) %> 
   <%= link_to "Back To Holiday Requests", events_path %>
-
-  <%= button_to "Cancel This Request", @event, method: :delete %>
+  <%= button_to "Cancel This Request", @event, method: :delete, class:"btn btn-sm-primary mt-4" %>
 </div>
