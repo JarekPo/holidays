@@ -1,8 +1,6 @@
-$primary-color: #9ec4b9;//#7fc2b9; //#3DC4B7; // #67C1CA;
-$secondary-color: #495057; //#264348;
-$additional-color: #ffdad2; // #FFFFE3;
-$link-color: red;
-$link-hover-color: yellow;
+$primary-color: #bcb88a;//#bdb76b; //#9ec4b9;
+$secondary-color: #495057;
+$additional-color: #ffdad2;
 
 .wrapper-home{
     background-image: url("home-bg.jpg");
@@ -18,8 +16,8 @@ $link-hover-color: yellow;
 .home-lead{
     font-size: 1.75;
     font-weight: 800;
-    color: $secondary-color;
-    text-shadow: 1px 1px 4px $additional-color;
+    color: $primary-color;
+    text-shadow: 1px 5px 8px $secondary-color;
     margin: 20px;
 }
 .btn-lg-primary{
@@ -39,6 +37,17 @@ $link-hover-color: yellow;
         background-color: $additional-color;
     }
 }
+.btn-sm-primary{
+    background-color: $secondary-color;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    font-weight: bold;
+    &:hover{
+        background-color: $primary-color;
+        color: $secondary-color;
+        font-weight: bold;
+    }
+}
 
 .page-navbar{
     font-weight: bold;
@@ -49,4 +58,39 @@ $link-hover-color: yellow;
 .navbar-text{
     color: $primary-color;
     text-align: center;
+}
+.links-primary{
+     a{
+        color: $primary-color;
+        text-decoration: none;
+        &:hover{
+            color: $additional-color;
+        }
+     }
+}
+.links-secondary{
+    a{
+        color: $secondary-color;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-decoration: none;
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
+        padding: 8px;
+        &:hover{
+            background-color: $primary-color;
+        }
+    }
+}
+    
+.btn-s-media{
+    border: 1px solid $secondary-color;
+    color: #FFF;
+    &:hover{
+        border: 1px solid $primary-color;
+    }
+}
+.btn-s-media-google{
+    &:hover{
+        border: 1px solid #34a853;
+    }
 }
