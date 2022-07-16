@@ -1,5 +1,5 @@
 
-<h1 class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">Approved Holidays</h1>
+<h1 id="header" style="position:relative" class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">Approved Holidays</h1>
 <span class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4 links-secondary">
   <%= link_to "Add Holiday To Calendar", new_request_path %>
 </span>
@@ -12,5 +12,13 @@
     </p><br/>
   <% end %>
 </div>
-
+<script> 
+$(document).ready(function(){
+    $("#header").animate({bottom: '40px'}, 600);
+	$(".btn1").fadeIn(900);
+	$(".btn1").animate({top: '90px'}, 200)
+	$(".btn2").fadeIn(1300);
+	$(".btn2").animate({top: '90px'}, 200)
+  });
+</script>
 

@@ -1,6 +1,8 @@
-$primary-color: #bcb88a;//#bdb76b; //#9ec4b9;
+$primary-color: #f4c430;
 $secondary-color: #495057;
-$additional-color: #ffdad2;
+$additional-color: #77b5fe;
+$btn-action-color: #A52A2A;
+$bootstrap-light-color: #f8f9fa;
 
 .wrapper-home{
     background-image: url("home-bg.jpg");
@@ -9,23 +11,22 @@ $additional-color: #ffdad2;
     background-repeat: no-repeat;
     height: 80vh;
 }
-.wrapper-about, .wrapper-requests, .wrapper-holidays{
+.wrapper-about{
     margin-bottom: 40px;;
+}
+.section-about{
+    padding-bottom: 60px;
 }
 .logo-header{
     margin-right: 30px;
 }
-
-.home-lead{
-    font-size: 1.75;
-    font-weight: 800;
-    color: $primary-color;
-    text-shadow: 1px 5px 8px $secondary-color;
-    margin: 20px;
+.logo-footer{
+    margin-right: 35px;
 }
+
 .btn-lg-primary{
     background-color: $primary-color;
-    border: 2px solid $additional-color;
+    border: 2px solid $secondary-color;
     margin: 50px;
     padding: 15px;
     min-width: 15%;
@@ -33,11 +34,15 @@ $additional-color: #ffdad2;
         color: $secondary-color;
         text-decoration: none;
         &:hover{
-            color: $secondary-color;
+            color: $primary-color;
         }
     }
     &:hover{
-        background-color: $additional-color;
+        background-color: $secondary-color;
+        border: 2px solid $primary-color;
+        a{
+            color: $primary-color;
+        }
     }
 }
 .btn-sm-primary{
@@ -58,15 +63,17 @@ $additional-color: #ffdad2;
     }
 }
 .navbar-text{
-    color: $primary-color;
+    font-size: 1.2em;
+    color: $btn-action-color;
+    text-shadow: 0px 0px 1px $primary-color;
     text-align: center;
 }
 .links-primary{
      a{
-        color: $primary-color;
+        color: $additional-color;
         text-decoration: none;
         &:hover{
-            color: #fff;
+            color: $bootstrap-light-color;
         }
      }
 }
@@ -83,28 +90,38 @@ $additional-color: #ffdad2;
         }
     }
 }
+.links-in-text{
+    a{
+        color: $additional-color;
+        text-decoration: none;
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+}
 .calendar-link{
     border: 1px solid $secondary-color;
     border-radius: 5px;
+    margin-left: 10px;
 }
 .btn-s-media{
     border: 1px solid $secondary-color;
-    color: #FFF;
+    color: $bootstrap-light-color;
     &:hover{
         border: 1px solid $primary-color;
     }
 }
 .btn-s-media-google{
     &:hover{
-        border: 1px solid #34a853;
+        border: 1px solid #fbbc05;
     }
 }
 .btn-calendar{
-    background-color: #A52A2A;
-    color: $additional-color;
+    background-color: $btn-action-color;
+    color: $bootstrap-light-color;
     font-weight: bold;
     &:hover{
         background-color: transparent;
-        color: #A52A2A;
+        color: $btn-action-color;
     }
 }

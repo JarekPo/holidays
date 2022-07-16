@@ -1,4 +1,4 @@
-<h2 class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">Edit <%= resource_name.to_s.humanize %></h2>
+<h2 id="header" style="position:relative" class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -39,3 +39,8 @@
   <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-sm-primary mb-4" %></p>
   <span class="links-secondary"><%= link_to "Back", :back %></span>
 </div>
+<script> 
+$(document).ready(function(){
+    $("#header").animate({bottom: '40px'}, 600);
+  });
+</script>
