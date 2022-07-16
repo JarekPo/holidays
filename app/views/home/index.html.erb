@@ -1,32 +1,42 @@
+<div class="d-flex justify-content-center"><br/>
+	<h1 class="" id="header" style="display:none; position:relative">Holidays Management System</h1>
+</div>
 <div class="wrapper-home text-center">
-    <main class="px-3 home-main"><br/>
-        
-        <h1 class="home-lead">Holidays Management System</h1>
-    </main>
+
 
 	<% if user_signed_in? %>
 		<% if current_user.admin == true %>
-			<div class="btn btn-lg btn-secondary btn-lg-primary fw-bold">
+			<div class="btn btn1 btn-lg btn-secondary btn-lg-primary fw-bold" style="display:none; position: relative">
 	            <%= link_to "View Holidays Calendar", home_calendar_path %>
 	        </div>
-	        <div class="btn btn-lg btn-secondary btn-lg-primary fw-bold">
+	        <div class="btn btn2 btn-lg btn-secondary btn-lg-primary fw-bold" style="display:none; position: relative">
 	            <%= link_to "Manage Calendar Entries", requests_path %>
 	        </div>
 		<% else %>
-	        <div class="btn btn-lg btn-secondary btn-lg-primary fw-bold">
+	        <div class="btn btn1 btn-lg btn-secondary btn-lg-primary fw-bold" style="display:none; position: relative">
 	            <%= link_to "Create Holiday Request", new_event_path %>
 	        </div>
-	        <div class="btn btn-lg btn-secondary btn-lg-primary fw-bold">
+	        <div class="btn btn2 btn-lg btn-secondary btn-lg-primary fw-bold" style="display:none; position: relative">
 	            <%= link_to "View Calendar", home_calendar_path %>
 	        </div>
 	    <% end %>
     <% else %>
-        <div class="btn btn-lg btn-secondary btn-lg-primary fw-bold">
+        <div class="btn btn1 btn-lg btn-secondary btn-lg-primary fw-bold" style="display:none; position: relative">
             <%= link_to 'Login', new_user_session_path, class:"nav-link" %>
         </div>
-        <div class="btn btn-lg btn-secondary btn-lg-primary fw-bold">
+        <div class="btn btn2 btn-lg btn-secondary btn-lg-primary fw-bold" style="display:none; position: relative">
             <%= link_to 'Register', new_user_registration_path, class:"nav-link" %>
         </div>
     <% end %>
 </div>
+<script> 
+$(document).ready(function(){
+	$("#header").fadeIn(900);
+    $("#header").animate({bottom: '40px'}, 600);
+	$(".btn1").delay(1500).fadeIn(900);
+	$(".btn1").animate({top: '90px'}, 200)
+	$(".btn2").delay(2000).fadeIn(900);
+	$(".btn2").animate({top: '90px'}, 200)
+  });
+</script>
    

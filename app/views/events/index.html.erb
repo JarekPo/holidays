@@ -1,5 +1,5 @@
 
-<h1 class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">Holiday Requests</h1>
+<h1 id="header" style="position:relative" class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">Holiday Requests</h1>
 <span class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4 links-secondary">
   <%= link_to "New Holiday Request", new_event_path %>
 </span>
@@ -24,6 +24,11 @@
     <% end %>
   <% end %>
 </div>
+<script> 
+$(document).ready(function(){
+    $("#header").animate({bottom: '40px'}, 600);
+  });
+</script>
 
 
 

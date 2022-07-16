@@ -1,4 +1,4 @@
-<h2 class="field col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">Log in</h2>
+<h2 id="header" style="position:relative" class="field col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
@@ -26,3 +26,8 @@
 <div class="field col-md-3 col-lg-2 col-xl-4 mx-auto mb-4 links-secondary">
   <%= render "devise/shared/links" %>
 </div>
+<script> 
+  $(document).ready(function(){
+    $("#header").animate({bottom: '40px'}, 600);
+  });
+</script>
