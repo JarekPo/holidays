@@ -14,8 +14,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_04_053710) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.text "notes"
-    t.datetime "start_date"
-    t.datetime "end_date"
+    t.date "start_date"
+    t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -25,8 +25,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_04_053710) do
   create_table "requests", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.datetime "start_date"
-    t.datetime "end_date"
+    t.date "start_date"
+    t.date "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
