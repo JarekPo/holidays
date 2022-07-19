@@ -14,6 +14,9 @@ $bootstrap-light-color: #f8f9fa;
 .wrapper-about{
     margin-bottom: 40px;;
 }
+.wrapper-requests, .wrapper-approved{
+    min-height: 60vh;
+}
 .section-about{
     padding-bottom: 60px;
 }
