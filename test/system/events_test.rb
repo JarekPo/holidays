@@ -5,43 +5,65 @@ class EventsTest < ApplicationSystemTestCase
     @event = events(:one)
   end
 
-  test "visiting the index" do
+  test "Should sign up" do
     visit events_url
-    assert_selector "h1", text: "Events"
+    click_on "Sign up"
+    fill_in "Email", with: "user@hms.com"
+    fill_in "Password", with: "password"
+    fill_in "Password confirmation", with: "password"
+    click_on "Sign up"
+    assert_text "Welcome! You have signed up successfully."
   end
-
-  test "should create event" do
+  test "Should create Holiday Request" do
     visit events_url
-    click_on "New event"
-
-    fill_in "End date", with: @event.end_date
-    fill_in "Name", with: @event.name
-    fill_in "Notes", with: @event.notes
-    fill_in "Start date", with: @event.start_date
-    click_on "Create Event"
-
-    assert_text "Event was successfully created"
-    click_on "Back"
+    click_on "Sign up"
+    fill_in "Email", with: "user@hms.com"
+    fill_in "Password", with: "password"
+    fill_in "Password confirmation", with: "password"
+    click_on "Sign up"
+    assert_text "Welcome! You have signed up successfully."
+    click_on "New Holiday Request"
+    fill_in "Name", with: "test"
+    fill_in "Start date", with: "20082022"
+    fill_in "End date", with: "23092022"
+    click_on "Submit"
+    assert_text "Event was successfully created."
+  end
+  test "Should edit Holiday Request" do
+    visit events_url
+    click_on "Sign up"
+    fill_in "Email", with: "user@hms.com"
+    fill_in "Password", with: "password"
+    fill_in "Password confirmation", with: "password"
+    click_on "Sign up"
+    assert_text "Welcome! You have signed up successfully."
+    click_on "New Holiday Request"
+    fill_in "Name", with: "test"
+    fill_in "Start date", with: "20082022"
+    fill_in "End date", with: "23092022"
+    click_on "Submit"
+    assert_text "Event was successfully created."
+    click_on "Edit This Holiday Request"
+    fill_in "Name", with: "edited"
+    click_on "Submit"
+    assert_text "Event was successfully updated."
+  end
+  test "Should delete Holiday Request" do
+    visit events_url
+    click_on "Sign up"
+    fill_in "Email", with: "user@hms.com"
+    fill_in "Password", with: "password"
+    fill_in "Password confirmation", with: "password"
+    click_on "Sign up"
+    assert_text "Welcome! You have signed up successfully."
+    click_on "New Holiday Request"
+    fill_in "Name", with: "test"
+    fill_in "Start date", with: "20082022"
+    fill_in "End date", with: "23092022"
+    click_on "Submit"
+    assert_text "Event was successfully created."
+    click_on "Cancel This Request"
+    assert_text "Event was successfully destroyed."
   end
 
-  test "should update Event" do
-    visit event_url(@event)
-    click_on "Edit this event", match: :first
-
-    fill_in "End date", with: @event.end_date
-    fill_in "Name", with: @event.name
-    fill_in "Notes", with: @event.notes
-    fill_in "Start date", with: @event.start_date
-    click_on "Update Event"
-
-    assert_text "Event was successfully updated"
-    click_on "Back"
-  end
-
-  test "should destroy Event" do
-    visit event_url(@event)
-    click_on "Destroy this event", match: :first
-
-    assert_text "Event was successfully destroyed"
-  end
 end
