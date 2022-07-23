@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Holidays Management System
+Application for annual leave management. It enables the employee to send a holiday request and the manager to enter holidays in the calendar.
 
-Things you may want to cover:
+* Ruby version - 3.0.3
 
-* Ruby version
+* Rails version - 7.0.2.3
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* System dependencies:
+* devise ~> 4.8 >= 4.8.1
+* date_validator ~> 0.12.0
+* fullCalendar
+* sqlite3 ~> 1.4
 
 * Deployment instructions
-
-* ...
+* Replace sqlite3 database with the PostrgreSQL database, run bundle install and push to the Heroku repository.
