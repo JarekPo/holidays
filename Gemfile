@@ -12,6 +12,9 @@ gem "sprockets-rails"
 # Use pg as the database for Active Record
 # gem "pg", "~> 1.4"
 
+# Use sqlite3 as the database for Active Record
+gem "sqlite3", "~> 1.4"
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
@@ -70,10 +73,10 @@ group :development do
   # gem "spring"
 end
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
+#group :production do
+#  gem 'pg'
+#  gem 'rails_12factor'
+#end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
