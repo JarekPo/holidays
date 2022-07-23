@@ -25,3 +25,17 @@ $(document).on('turbolinks:load', function(){
   eventCalendar();  
 });
 $(document).on('turbolinks:before-cache', clearCalendar);
+
+document.addEventListener("turbo:load", function(event) {
+  window.dataLayer = window.dataLayer || []
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date())
+  gtag('config', 'G-N4P5SR4XM1', {'page_location': event.detail.url})
+}, false)
+
+// Global site tag (gtag.js) - Google Analytics -->
+/*
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N4P5SR4XM1');*/

@@ -12,7 +12,7 @@
       <% else %>
           <h1>Holidays Calendar</h1>
           <div>
-            <%= link_to 'Create Holiday Request', new_request_path, class:"btn btn-calendar"%>
+            <%= link_to 'Create Holiday Request', new_event_path, class:"btn btn-calendar"%>
           </div>
       <% end %>
     <% end %>
@@ -22,27 +22,46 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var calendarEl = document.getElementById('calendar');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-        headerToolbar: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'dayGridMonth,timeGridWeek,timeGridDay'
-        },
-        displayEventTime: false,
-        navLinks: true, // can click day/week names to navigate views
-        selectable: true,
-        selectMirror: true,
-        events: '/requests.json',
-        editable: true,
-        dayMaxEvents: true, // allow "more" link when too many events
-      });
+      
+      if (window.innerWidth >= 990 ){
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+          },
+          displayEventTime: false,
+          navLinks: true, // can click day/week names to navigate views
+          selectable: true,
+          selectMirror: true,
+          events: '/requests.json',
+          editable: true,
+          dayMaxEvents: true, // allow "more" link when too many events
+        });
+      }
+      else{
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          headerToolbar: {
+            left: 'prev,next today',
+            center: '',
+            right: 'title'
+          },
+          displayEventTime: false,
+          navLinks: true,
+          selectable: true,
+          selectMirror: true,
+          events: '/requests.json',
+          editable: true,
+          dayMaxEvents: true, 
+        });
+      }
       calendar.render();
     });
 
   </script>
 </div>
 <script> 
-$(document).ready(function(){
+  $(document).ready(function(){
     $("#header").animate({bottom: '40px'}, 600);
   });
 </script>

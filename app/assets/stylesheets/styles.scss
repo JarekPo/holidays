@@ -128,3 +128,19 @@ $bootstrap-light-color: #f8f9fa;
         color: $btn-action-color;
     }
 }
+.min-vh{
+    height: 60vh;
+}
+.pictures-credits{
+    font-size: 70%;
+    color: $bootstrap-light-color;
+    a{
+        color: $bootstrap-light-color;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .navbar-text{
+        display:none;
+    }
+}
