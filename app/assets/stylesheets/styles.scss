@@ -133,6 +133,10 @@ $bootstrap-light-color: #f8f9fa;
 }
 .pictures-credits{
     font-size: 70%;
+    color: $bootstrap-light-color;
+    a{
+        color: $bootstrap-light-color;
+    }
 }
 
 @media only screen and (max-width: 990px) {
