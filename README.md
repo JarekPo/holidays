@@ -15,3 +15,5 @@ Application for annual leave management. It enables the employee to send a holid
 
 * Deployment instructions
 * Replace sqlite3 database with the PostrgreSQL database, run bundle install and push to the Heroku repository.
+
+[Deployed application demo](https://holidays-management.herokuapp.com)
