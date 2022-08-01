@@ -2,7 +2,7 @@
 	<h1 class="" id="header" style="position:relative">About</h1>
 </div>
 <div class="wrapper-about container">
-	<div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4 links-in-text section-about">
+	<div class="col-md-10 col-lg-8 col-xl-6 mx-auto mb-4 links-in-text section-about">
 		<h3>About Holidays Management System</h3>
 		<p>The Holidays Management System has been developed to help employees apply for and managers manage their holidays. 
 		You can apply for holidays without making an appointment with your manager; simply fill in the <%= link_to "Holiday Request Form", new_event_path %> to be processed. 
@@ -10,7 +10,7 @@
 		</p>
 		<hr />
 	</div>
-	<div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4 section-about">
+	<div class="col-md-10 col-lg-8 col-xl-6 mx-auto mb-4 section-about">
 		<h3>Terms of application for annual leave.</h3>
 		<ul>
 			<li>You are entitled to 20 days of holiday per year.</li>
@@ -25,7 +25,7 @@
 		</ul>
 		<hr />
 	</div>
-	<div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4 section-about">
+	<div class="col-md-10 col-lg-8 col-xl-6 mx-auto mb-4 section-about">
 		<h3>How does it work?</h3>
 		<ol>
 			<li>Log in.</li>
@@ -37,7 +37,7 @@
 		<hr />
 	</div>
 	<% if user_signed_in? && current_user.admin == true %>
-		<div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4 section-about">
+		<div class="col-md-10 col-lg-8 col-xl-6 mx-auto mb-4 section-about">
 			<h3>How to put holidays on the calendar?</h3>
 			<ol>
 				<li>Check the Holiday Requests page for new entries.</li>
@@ -49,7 +49,7 @@
 		</div>
 	<% end %>
 	<% if user_signed_in? && current_user.admin == false %>
-		<div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4 links-secondary">
+		<div class="col-md-10 col-lg-8 col-xl-6 mx-auto mb-4 links-secondary">
 			<%= link_to "Create Holiday Request", new_event_path %>
 		</div>
 	<% end %>

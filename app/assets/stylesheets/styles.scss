@@ -144,3 +144,10 @@ $bootstrap-light-color: #f8f9fa;
         display:none;
     }
 }
+@media only screen and (max-width: 520px) {
+    .links-secondary{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

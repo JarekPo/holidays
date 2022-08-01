@@ -1,4 +1,4 @@
-<h2 class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">Change your password</h2>
+<h2 class="col-md-10 col-lg-8 col-xl-6 mx-auto mb-4">Change your password</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -22,6 +22,6 @@
   </div>
 <% end %>
 
-<div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4 links-secondary">
+<div class="col-md-10 col-lg-8 col-xl-6 mx-auto mb-4 links-secondary">
   <%= render "devise/shared/links" %>
 </div>
