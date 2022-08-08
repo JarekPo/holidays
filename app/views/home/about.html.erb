@@ -30,7 +30,7 @@
 		<ol>
 			<li>Log in.</li>
 			<li>Check the Holidays Calendar for available dates.</li>
-			<li>Fill in the Holiday Requests form.</li>
+			<li>Fill in the Holiday Requests form. Important: please provide a valid email address as we will use it to communicate with you.</li>
 			<li>Wait for approval.</li>
 			<li>Your holiday will appear on the calendar once granted.</li>
 		</ol>
@@ -53,9 +53,17 @@
 			<%= link_to "Create Holiday Request", new_event_path %>
 		</div>
 	<% end %>
+	<div class="col-md-10 col-lg-8 col-xl-6 mx-auto mb-4 links-in-text section-about">
+		<h3>Do you have questions? Get in touch with us:</h3>
+		<p><a href="mailto:contact@hms.com?subject=Holiday request">email: contact@hms.com</a></p>
+		<p><a href="tel:+353123456">tel: 01 23456</a></p>
+		<p><a href="tel:+353876543210">mobile: 087 6543210</a></p>
+		<hr />
+	</div>
 </div>
 <script> 
 $(document).ready(function(){
     $("#header").animate({bottom: '40px'}, 600);
   });
 </script>
+Do you have questions? Get in touch with us: 
