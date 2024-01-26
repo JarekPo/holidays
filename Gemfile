@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem "sprockets-rails"
 
 # Use pg as the database for Active Record
-# gem "pg", "~> 1.4"
+gem "pg", "~> 1.4"
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
@@ -67,15 +67,15 @@ group :development do
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
+  gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  gem "spring"
 end
 
 group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+  gem "pg", "~> 1.4"
+  # gem 'rails_12factor'
 end
 
 group :test do
